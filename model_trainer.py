@@ -20,7 +20,7 @@ def process_ds(ds, tokenizer):
     ds = ds.remove_columns(["repo_name", "path", "license", "size"])
     ds = ds.rename_column("language", "label")
     ds = ds.rename_column("code", "text")
-    ds = ds.filter(lambda example: example["label"] == 'Python' or example['label'] == 'Markdown' or example['label'] == 'Dockerfile' or example['label'] == 'C')
+    ds = ds.filter(lambda example: example["label"] == 'Python' or example['label'] == 'Markdown' or example['label'] == 'Dockerfile' or example['label'] == 'C' or example['label'] == 'Java')
 
     def tokenize_function(examples):
         label_to_int_dict = {
@@ -28,6 +28,7 @@ def process_ds(ds, tokenizer):
             "Markdown": 1,
             "Dockerfile": 2,
             "C": 3,
+            "Java": 4
         }
         labels = [label_to_int_dict[label] for label in examples["label"]]
         tokenized = tokenizer(examples["text"], padding="max_length", truncation=True)
@@ -61,9 +62,9 @@ def main():
     # print(Counter(languages))
 
     ''' train '''
-    training_args = TrainingArguments(output_dir="test_trainer", evaluation_strategy='epoch', max_steps=50, seed=SEED)
+    training_args = TrainingArguments(output_dir="test_trainer", evaluation_strategy='epoch', max_steps=100, seed=SEED)
     trainer = Trainer(
-        model=AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=4),
+        model=AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=5),
         args=training_args,
         train_dataset=train_ds,
         eval_dataset=test_ds,
