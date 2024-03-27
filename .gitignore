@@ -1,4 +1,5 @@
 venv
+cache_dir
 __pycache__
 test_trainer
 apikey.txt

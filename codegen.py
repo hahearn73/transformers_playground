@@ -7,7 +7,7 @@ with open('apikey.txt', 'r') as f:
     api_key = f.read()
 client = OpenAI(api_key=api_key)
 
-OUTPUT_CODE_DIR = "../generated_code/"
+OUTPUT_CODE_DIR = "./generated_code/"
 LANGUAGES_AND_EXTENSIONS_FILE = "../languages_and_extensions.json"
 PROGRAMMING_TASKS_FILE = "../programming_tasks.json"
 
