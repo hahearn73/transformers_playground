@@ -1,0 +1,27 @@
+{
+    "language_indexing": {
+        "Java": ".java",
+        "C": ".c",
+        "Python": ".py",
+        "C++": ".cpp",
+        "Javascript": ".js",
+        "GO": ".go",
+        "C#": ".cs",
+        "Ruby": ".rb",
+        "Swift": ".swift",
+        "Kotlin": ".kt"
+    },
+
+    "extension_indexing": {
+        ".java": "Java",
+        ".c": "C",
+        ".py": "Python",
+        ".cpp": "C++",
+        ".js": "Javascript",
+        ".go": "GO",
+        ".cs": "C#",
+        ".rb": "Ruby",
+        ".swift": "Swift",
+        ".kt": "Kotlin"
+    }
+}

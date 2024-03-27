@@ -1,0 +1,23 @@
+{
+    "programming_tasks": [
+      "Implement a binary search algorithm",
+      "Write a program to calculate factorial of a number",
+      "Create a function to check if a string is a palindrome",
+      "Implement merge sort",
+      "Implement a recursive function to compute the nth Fibonacci number",
+      "Write a function to find the largest element in a list",
+      "Create a program to convert temperature units (e.g., Celsius to Fahrenheit)",
+      "Develop a program to calculate the area of common shapes (e.g., circle, rectangle)",
+      "Write a program to check if a number is prime",
+      "Write a function to reverse a linked list",
+      "Write a function to check if two strings are anagrams",
+      "Write a function to detect if a string contains only digits",
+      "Write a function to calculate the distance between two points in 3D space",
+      "Write a function to calculate the GCD (Greatest Common Divisor) of two numbers",
+      "Write a function to calculate the intersection of two sets",
+      "Write a function to check if a number is a perfect square",
+      "Write a function to calculate the Hamming distance between two strings",
+      "Develop a program to generate pseudorandom numbers"
+    ]
+}
+  

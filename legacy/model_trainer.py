@@ -48,7 +48,7 @@ def main():
 
     ''' load and process dataset '''
     full_list = list(load_dataset("codeparrot/github-code", streaming=True, split="train", trust_remote_code=True).take(10_000))
-    train_list, test_list = train_test_split(full_list, test_size=0.1, shuffle=True)
+    train_list, test_list = train_test_split(full_list, test_size=0.1, shuffle=True, random_state=SEED)
     train_ds = process_ds(Dataset.from_list(train_list), tokenizer)
     test_ds = process_ds(Dataset.from_list(test_list), tokenizer)
 

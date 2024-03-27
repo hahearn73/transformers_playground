@@ -1,4 +1,4 @@
-from model_trainer import MODEL_PATH, TOKENIZER_PATH
+from legacy.model_trainer import MODEL_PATH, TOKENIZER_PATH
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 from torch import argmax
 
