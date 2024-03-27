@@ -7,7 +7,7 @@ with open('apikey.txt', 'r') as f:
     api_key = f.read()
 client = OpenAI(api_key=api_key)
 
-OUTPUT_CODE_DIR = "./generated_code/"
+OUTPUT_CODE_DIR = "../generated_code/"
 LANGUAGES_AND_EXTENSIONS_FILE = "../languages_and_extensions.json"
 PROGRAMMING_TASKS_FILE = "../programming_tasks.json"
 
@@ -24,9 +24,9 @@ def remove_first_and_last_line(text):
         return ""
 
 for language, extension in languages_and_extensions['language_indexing'].items():
-    for task in programming_tasks:
+    for task_id, task in enumerate(programming_tasks):
+        print(f"{language}:::{task_id}/{len(programming_tasks)}")
         prompt = "Complete the following task in " + language + ": " + task
-        print(prompt)
         completion = client.chat.completions.create(
         model="gpt-4-turbo-preview",
             messages=[

@@ -4,12 +4,8 @@
         "C": ".c",
         "Python": ".py",
         "C++": ".cpp",
-        "Javascript": ".js",
         "GO": ".go",
-        "C#": ".cs",
-        "Ruby": ".rb",
-        "Swift": ".swift",
-        "Kotlin": ".kt"
+        "C#": ".cs"
     },
 
     "extension_indexing": {
@@ -17,11 +13,7 @@
         ".c": "C",
         ".py": "Python",
         ".cpp": "C++",
-        ".js": "Javascript",
         ".go": "GO",
-        ".cs": "C#",
-        ".rb": "Ruby",
-        ".swift": "Swift",
-        ".kt": "Kotlin"
+        ".cs": "C#"
     }
 }

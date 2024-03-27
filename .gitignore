@@ -1,4 +1,6 @@
-venv/*
-__pycache__/*
-test_trainer/*
+venv
+__pycache__
+test_trainer
 apikey.txt
+generated_code
+model
